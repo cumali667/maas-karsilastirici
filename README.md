@@ -35,6 +35,9 @@ Veriler gerçek döviz/altın verileriyle hazırlanmıştır.
 2. Her ay için **gerçek maaşınızı** girin.
 3. TL, USD ve Altın bazında oluşan farkları üst kısımda görebilirsiniz.
 4. Hesaplamaları **CSV olarak dışa aktarabilir** ya da sıfırlayabilirsiniz.
+5. Maaş hesaplamak için çıplak ücretinizi bilmeniz gerekmektedir. Çıplak ücret ödeneklerin çıkarılması ile belirlenir. Örneğin dil tazminatınız veya makam tazminatınız, ek ders ücretiniz varsa yatan maaşınızdan çıkarılması gerekir.
+6. Eğer yatan ücretinizi bilmiyorsanız ya da hatırlamıyorsanız e devlet SGK 4a hizmet dökümünüzdeki ücreti 0,83 ile çarpıp yaklaşık bir sayıya ulaşırsınız. Yine bu ücretten dil tazminatı ek ders ve makam tazminatı çıkarılmalıdır. SGK 4a hizmet dökümünde her ay değişen birden fazla sayı olabilir. Bu durumda şubat temmuz arasında en az olanını ve eylül aralık arasındaki en az olanını seçip 0,83 ile çarpın (Yılda 2 kere zam aldığımız için).
+7. Eğer net ücretiniz ile SGK Hizmet Dökümünde yazan ücret arasında yüksek bir fark varsa yani o üniversitede vergi muafiyeti sağlayan akademik bordro yoktur. Bu durumda bizden yardım isteyebilirsiniz.
 
 ---
 
