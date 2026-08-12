@@ -7,6 +7,27 @@ const months = [
   "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"
 ];
 
+// Bir ay yalnızca hem devlet maaşı hem de o aya ait kur verisi varsa kullanılabilir.
+// Kur yoksa recalculateTotals o ayı toplamlara hiç katmaz; ayı açık bırakmak
+// kullanıcıya sessizce yanlış bir sonuç gösterirdi. Aralık sınırları veriden
+// türetilir, elle tarih yazılmaz — yeni ay eklendiğinde burası değişmez.
+const isMonthActive = (year, month, monthsObj) =>
+  Boolean(monthsObj?.[month]) && Boolean(endeksData.exchange_rates?.[year]?.[month]);
+
+// Bir unvanın tüm aylarını devlet maaşlarıyla doldurur.
+const seedSalaries = (role) => {
+  const seeded = {};
+  Object.entries(salaryData.roles[role]).forEach(([year, monthsObj]) => {
+    seeded[year] = {};
+    months.forEach((month) => {
+      if (monthsObj[month]) {
+        seeded[year][month] = monthsObj[month];
+      }
+    });
+  });
+  return seeded;
+};
+
 import { useEffect } from "react";
 
 export default function MaasHesaplayici() {
@@ -21,20 +42,19 @@ export default function MaasHesaplayici() {
     return localStorage.getItem(roleStorageKey) || "Araştırma Görevlisi";
   });
   const [userSalaries, setUserSalaries] = useState(() => {
+    const seeded = seedSalaries(selectedRole);
     const saved = localStorage.getItem(localStorageKey);
-    if (saved) return JSON.parse(saved);
+    if (!saved) return seeded;
 
-    const initial = {};
-    const roleSalaries = salaryData.roles[selectedRole];
-    Object.entries(roleSalaries).forEach(([year, monthsObj]) => {
-      initial[year] = {};
-      months.forEach((month) => {
-        if (monthsObj[month]) {
-          initial[year][month] = monthsObj[month];
-        }
-      });
+    // Eski kullanıcıların kayıtlı verisinde sonradan eklenen yıllar/aylar yoktur.
+    // Eksik anahtarlar devlet maaşıyla tamamlanır, kullanıcının girdiği değerlere
+    // dokunulmaz.
+    const parsed = JSON.parse(saved);
+    const merged = {};
+    Object.entries(seeded).forEach(([year, monthsObj]) => {
+      merged[year] = { ...monthsObj, ...parsed[year] };
     });
-    return initial;
+    return merged;
   });
 
   useEffect(() => {
@@ -46,19 +66,11 @@ export default function MaasHesaplayici() {
     setSelectedRole(role);
     localStorage.setItem(roleStorageKey, role);
 
-    const initial = {};
-    const roleSalaries = salaryData.roles[role];
-    Object.entries(roleSalaries).forEach(([year, monthsObj]) => {
-      initial[year] = {};
-      months.forEach((month) => {
-        if (monthsObj[month]) {
-          initial[year][month] = monthsObj[month];
-        }
-      });
-    });
+    const initial = seedSalaries(role);
     setUserSalaries(initial);
     localStorage.setItem(localStorageKey, JSON.stringify(initial));
-    recalculateTotals(initial);
+    // Yeni unvan bu render'da henüz state'e yazılmadığı için açıkça geçilir.
+    recalculateTotals(initial, role);
   };
 
   const handleSalaryChange = (year, month, value) => {
@@ -74,20 +86,21 @@ export default function MaasHesaplayici() {
     recalculateTotals(updatedSalaries);
   };
 
-  const recalculateTotals = (salaries) => {
-    const roleSalaries = salaryData.roles[selectedRole];
+  const recalculateTotals = (salaries, role = selectedRole) => {
+    const roleSalaries = salaryData.roles[role];
     let tl = 0;
     let usd = 0;
     let gold = 0;
 
     Object.entries(roleSalaries).forEach(([year, monthsObj]) => {
       months.forEach((month) => {
+        if (!isMonthActive(year, month, monthsObj)) return;
         const devletMaas = monthsObj[month];
         const kullaniciMaas = salaries?.[year]?.[month];
         if (devletMaas && kullaniciMaas) {
           const fark = devletMaas - Number(kullaniciMaas);
-          const kur = endeksData.exchange_rates?.[year]?.[month];
-          if (kur && fark) {
+          const kur = endeksData.exchange_rates[year][month];
+          if (fark) {
             tl += fark;
             usd += fark / kur.usd_try;
             gold += fark / kur.gold_try;
@@ -108,12 +121,8 @@ export default function MaasHesaplayici() {
       <div key={year} className="mb-6">
         <h3 className="font-semibold text-lg mb-2">{year}</h3>
         <div className="flex flex-wrap gap-4">
-          {months.map((month, index) => {
-            const monthNumber = index + 1;
-            const currentYear = Number(year);
-            const isDisabled =
-              (currentYear === 2020 && monthNumber < 5) ||
-              (currentYear === 2025 && monthNumber > 4);
+          {months.map((month) => {
+            const isDisabled = !isMonthActive(year, month, salaries);
 
             const devletMaas = salaries[month] || null;
             const kullaniciMaas = userSalaries?.[year]?.[month] || null;
@@ -170,18 +179,13 @@ export default function MaasHesaplayici() {
     let cumulativeGold = 0;
 
     Object.entries(roleSalaries).forEach(([year, monthsObj]) => {
-      months.forEach((month, i) => {
-        const monthNum = i + 1;
-        const currentYear = Number(year);
-        const isDisabled =
-          (currentYear === 2020 && monthNum < 5) ||
-          (currentYear === 2025 && monthNum > 3);
-        if (isDisabled) return;
+      months.forEach((month) => {
+        if (!isMonthActive(year, month, monthsObj)) return;
 
         const devletMaas = monthsObj[month];
         const kullaniciMaas = Number(userSalaries?.[year]?.[month] ?? devletMaas);
         const fark = devletMaas - kullaniciMaas;
-        const kur = endeksData.exchange_rates?.[year]?.[month] || {};
+        const kur = endeksData.exchange_rates[year][month];
         const usd = kur.usd_try ? (fark / kur.usd_try) : "";
         const gold = kur.gold_try ? (fark / kur.gold_try) : "";
 
@@ -223,7 +227,7 @@ export default function MaasHesaplayici() {
             <div className="flex items-start justify-between gap-4 mb-6">
         <div>
           <h1 className="text-3xl font-bold">Öğretmen Sendikası Vakıf Üniversiteleri Birimi</h1>
-          <h4 className="text-3xl  mt-2">2020-2025 Vakıf Üniversiteleri Eksik Ödenen Maaşları Hesaplama Robotu</h4>
+          <h4 className="text-3xl  mt-2">2020-2026 Vakıf Üniversiteleri Eksik Ödenen Maaşları Hesaplama Robotu</h4>
         </div>
         <div>
           <button

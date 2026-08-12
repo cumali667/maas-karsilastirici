@@ -1,272 +1,334 @@
 {
-    "exchange_rates": {
-      "2020": {
-        "Ocak": {
-            "usd_try": 6.24,
-            "gold_try": 318.23
-          },
-        "Şubat": {
-          "usd_try": 6.24,
-          "gold_try": 318.23
-        },
-        "Mart": {
-          "usd_try": 6.61,
-          "gold_try": 335.91
-        },
-        "Nisan": {
-          "usd_try": 6.98,
-          "gold_try": 379.43
-        },
-        "Mayıs": {
-          "usd_try": 6.82,
-          "gold_try": 381.19
-        },
-        "Haziran": {
-          "usd_try": 6.85,
-          "gold_try": 392.81
-        },
-        "Temmuz": {
-          "usd_try": 6.97,
-          "gold_try": 442.91
-        },
-        "Ağustos": {
-          "usd_try": 7.35,
-          "gold_try": 465.54
-        },
-        "Eylül": {
-          "usd_try": 7.72,
-          "gold_try": 468.68
-        },
-        "Ekim": {
-          "usd_try": 8.34,
-          "gold_try": 506.6
-        },
-        "Kasım": {
-          "usd_try": 7.83,
-          "gold_try": 447.83
-        },
-        "Aralık": {
-          "usd_try": 7.43,
-          "gold_try": 454.12
-        }
+  "exchange_rates": {
+    "2020": {
+      "Ocak": {
+        "gold_try": 318.23,
+        "usd_try": 6.24
       },
-      "2021": {
-        "Ocak": {
-          "usd_try": 7.31,
-          "gold_try": 434.59
-        },
-        "Şubat": {
-          "usd_try": 7.42,
-          "gold_try": 415.07
-        },
-        "Mart": {
-          "usd_try": 8.24,
-          "gold_try": 453.45
-        },
-        "Nisan": {
-          "usd_try": 8.27,
-          "gold_try": 471.48
-        },
-        "Mayıs": {
-          "usd_try": 8.48,
-          "gold_try": 520.96
-        },
-        "Haziran": {
-          "usd_try": 8.7,
-          "gold_try": 494.92
-        },
-        "Temmuz": {
-          "usd_try": 8.43,
-          "gold_try": 493.07
-        },
-        "Ağustos": {
-          "usd_try": 8.3,
-          "gold_try": 485.43
-        },
-        "Eylül": {
-          "usd_try": 8.89,
-          "gold_try": 501.02
-        },
-        "Ekim": {
-          "usd_try": 9.6,
-          "gold_try": 548.95
-        },
-        "Kasım": {
-          "usd_try": 13.47,
-          "gold_try": 770.06
-        },
-        "Aralık": {
-          "usd_try": 13.32,
-          "gold_try": 779.68
-        }
+      "Şubat": {
+        "usd_try": 6.24,
+        "gold_try": 318.23
       },
-      "2022": {
-        "Ocak": {
-          "usd_try": 13.31,
-          "gold_try": 769.08
-        },
-        "Şubat": {
-          "usd_try": 13.84,
-          "gold_try": 848.68
-        },
-        "Mart": {
-          "usd_try": 14.67,
-          "gold_try": 913.77
-        },
-        "Nisan": {
-          "usd_try": 14.84,
-          "gold_try": 905.36
-        },
-        "Mayıs": {
-          "usd_try": 16.37,
-          "gold_try": 968.45
-        },
-        "Haziran": {
-          "usd_try": 16.69,
-          "gold_try": 970.14
-        },
-        "Temmuz": {
-          "usd_try": 17.91,
-          "gold_try": 1015.74
-        },
-        "Ağustos": {
-          "usd_try": 18.19,
-          "gold_try": 999.73
-        },
-        "Eylül": {
-          "usd_try": 18.5,
-          "gold_try": 987.69
-        },
-        "Ekim": {
-          "usd_try": 18.59,
-          "gold_try": 977.26
-        },
-        "Kasım": {
-          "usd_try": 18.59,
-          "gold_try": 1062.59
-        },
-        "Aralık": {
-          "usd_try": 18.69,
-          "gold_try": 1096.93
-        }
+      "Mart": {
+        "usd_try": 6.61,
+        "gold_try": 335.91
       },
-      "2023": {
-        "Ocak": {
-          "usd_try": 18.81,
-          "gold_try": 1165.67
-        },
-        "Şubat": {
-          "usd_try": 18.88,
-          "gold_try": 1108.61
-        },
-        "Mart": {
-          "usd_try": 19.16,
-          "gold_try": 1214.35
-        },
-        "Nisan": {
-          "usd_try": 19.45,
-          "gold_try": 1242.82
-        },
-        "Mayıs": {
-          "usd_try": 20.8,
-          "gold_try": 1312.42
-        },
-        "Haziran": {
-          "usd_try": 26.05,
-          "gold_try": 1575.04
-        },
-        "Temmuz": {
-          "usd_try": 26.9,
-          "gold_try": 1701.08
-        },
-        "Ağustos": {
-          "usd_try": 26.65,
-          "gold_try": 1665.03
-        },
-        "Eylül": {
-          "usd_try": 27.37,
-          "gold_try": 1629.16
-        },
-        "Ekim": {
-          "usd_try": 28.28,
-          "gold_try": 1805.39
-        },
-        "Kasım": {
-          "usd_try": 28.86,
-          "gold_try": 1895.0
-        },
-        "Aralık": {
-          "usd_try": 29.48,
-          "gold_try": 1954.96
-        }
+      "Nisan": {
+        "usd_try": 6.98,
+        "gold_try": 379.43
       },
-      "2024": {
-        "Ocak": {
-          "usd_try": 30.32,
-          "gold_try": 1991.52
-        },
-        "Şubat": {
-          "usd_try": 31.19,
-          "gold_try": 2056.98
-        },
-        "Mart": {
-          "usd_try": 32.35,
-          "gold_try": 2340.66
-        },
-        "Nisan": {
-          "usd_try": 32.4,
-          "gold_try": 2386.96
-        },
-        "Mayıs": {
-          "usd_try": 32.23,
-          "gold_try": 2408.35
-        },
-        "Haziran": {
-          "usd_try": 32.65,
-          "gold_try": 2449.99
-        },
-        "Temmuz": {
-          "usd_try": 33.14,
-          "gold_try": 2609.34
-        },
-        "Ağustos": {
-          "usd_try": 34.07,
-          "gold_try": 2743.6
-        },
-        "Eylül": {
-          "usd_try": 34.16,
-          "gold_try": 2898.61
-        },
-        "Ekim": {
-          "usd_try": 34.25,
-          "gold_try": 3029.24
-        },
-        "Kasım": {
-          "usd_try": 34.69,
-          "gold_try": 2960.51
-        },
-        "Aralık": {
-          "usd_try": 35.34,
-          "gold_try": 2983.7
-        }
+      "Mayıs": {
+        "usd_try": 6.82,
+        "gold_try": 381.19
       },
-      "2025": {
-        "Ocak": {
-          "usd_try": 35.7,
-          "gold_try": 3219.08
-        },
-        "Şubat": {
-          "usd_try": 36.39,
-          "gold_try": 3357.66
-        },
-        "Mart": {
-          "usd_try": 37.94,
-          "gold_try": 3812.33
-        },
-        "Nisan": {
-          "usd_try": 38.01,
-          "gold_try": 3758.39
-        }
+      "Haziran": {
+        "usd_try": 6.85,
+        "gold_try": 392.81
+      },
+      "Temmuz": {
+        "usd_try": 6.97,
+        "gold_try": 442.91
+      },
+      "Ağustos": {
+        "usd_try": 7.35,
+        "gold_try": 465.54
+      },
+      "Eylül": {
+        "usd_try": 7.72,
+        "gold_try": 468.68
+      },
+      "Ekim": {
+        "usd_try": 8.34,
+        "gold_try": 506.6
+      },
+      "Kasım": {
+        "usd_try": 7.83,
+        "gold_try": 447.83
+      },
+      "Aralık": {
+        "usd_try": 7.43,
+        "gold_try": 454.12
+      }
+    },
+    "2021": {
+      "Ocak": {
+        "usd_try": 7.31,
+        "gold_try": 434.59
+      },
+      "Şubat": {
+        "usd_try": 7.42,
+        "gold_try": 415.07
+      },
+      "Mart": {
+        "usd_try": 8.24,
+        "gold_try": 453.45
+      },
+      "Nisan": {
+        "usd_try": 8.27,
+        "gold_try": 471.48
+      },
+      "Mayıs": {
+        "usd_try": 8.48,
+        "gold_try": 520.96
+      },
+      "Haziran": {
+        "usd_try": 8.7,
+        "gold_try": 494.92
+      },
+      "Temmuz": {
+        "usd_try": 8.43,
+        "gold_try": 493.07
+      },
+      "Ağustos": {
+        "usd_try": 8.3,
+        "gold_try": 485.43
+      },
+      "Eylül": {
+        "usd_try": 8.89,
+        "gold_try": 501.02
+      },
+      "Ekim": {
+        "usd_try": 9.6,
+        "gold_try": 548.95
+      },
+      "Kasım": {
+        "usd_try": 13.47,
+        "gold_try": 770.06
+      },
+      "Aralık": {
+        "usd_try": 13.32,
+        "gold_try": 779.68
+      }
+    },
+    "2022": {
+      "Ocak": {
+        "usd_try": 13.31,
+        "gold_try": 769.08
+      },
+      "Şubat": {
+        "usd_try": 13.84,
+        "gold_try": 848.68
+      },
+      "Mart": {
+        "usd_try": 14.67,
+        "gold_try": 913.77
+      },
+      "Nisan": {
+        "usd_try": 14.84,
+        "gold_try": 905.36
+      },
+      "Mayıs": {
+        "usd_try": 16.37,
+        "gold_try": 968.45
+      },
+      "Haziran": {
+        "usd_try": 16.69,
+        "gold_try": 970.14
+      },
+      "Temmuz": {
+        "usd_try": 17.91,
+        "gold_try": 1015.74
+      },
+      "Ağustos": {
+        "usd_try": 18.19,
+        "gold_try": 999.73
+      },
+      "Eylül": {
+        "usd_try": 18.5,
+        "gold_try": 987.69
+      },
+      "Ekim": {
+        "usd_try": 18.59,
+        "gold_try": 977.26
+      },
+      "Kasım": {
+        "usd_try": 18.59,
+        "gold_try": 1062.59
+      },
+      "Aralık": {
+        "usd_try": 18.69,
+        "gold_try": 1096.93
+      }
+    },
+    "2023": {
+      "Ocak": {
+        "usd_try": 18.81,
+        "gold_try": 1165.67
+      },
+      "Şubat": {
+        "usd_try": 18.88,
+        "gold_try": 1108.61
+      },
+      "Mart": {
+        "usd_try": 19.16,
+        "gold_try": 1214.35
+      },
+      "Nisan": {
+        "usd_try": 19.45,
+        "gold_try": 1242.82
+      },
+      "Mayıs": {
+        "usd_try": 20.8,
+        "gold_try": 1312.42
+      },
+      "Haziran": {
+        "usd_try": 26.05,
+        "gold_try": 1575.04
+      },
+      "Temmuz": {
+        "usd_try": 26.9,
+        "gold_try": 1701.08
+      },
+      "Ağustos": {
+        "usd_try": 26.65,
+        "gold_try": 1665.03
+      },
+      "Eylül": {
+        "usd_try": 27.37,
+        "gold_try": 1629.16
+      },
+      "Ekim": {
+        "usd_try": 28.28,
+        "gold_try": 1805.39
+      },
+      "Kasım": {
+        "usd_try": 28.86,
+        "gold_try": 1895
+      },
+      "Aralık": {
+        "usd_try": 29.48,
+        "gold_try": 1954.96
+      }
+    },
+    "2024": {
+      "Ocak": {
+        "usd_try": 30.32,
+        "gold_try": 1991.52
+      },
+      "Şubat": {
+        "usd_try": 31.19,
+        "gold_try": 2056.98
+      },
+      "Mart": {
+        "usd_try": 32.35,
+        "gold_try": 2340.66
+      },
+      "Nisan": {
+        "usd_try": 32.4,
+        "gold_try": 2386.96
+      },
+      "Mayıs": {
+        "usd_try": 32.23,
+        "gold_try": 2408.35
+      },
+      "Haziran": {
+        "usd_try": 32.65,
+        "gold_try": 2449.99
+      },
+      "Temmuz": {
+        "usd_try": 33.14,
+        "gold_try": 2609.34
+      },
+      "Ağustos": {
+        "usd_try": 34.07,
+        "gold_try": 2743.6
+      },
+      "Eylül": {
+        "usd_try": 34.16,
+        "gold_try": 2898.61
+      },
+      "Ekim": {
+        "usd_try": 34.25,
+        "gold_try": 3029.24
+      },
+      "Kasım": {
+        "usd_try": 34.69,
+        "gold_try": 2960.51
+      },
+      "Aralık": {
+        "usd_try": 35.34,
+        "gold_try": 2983.7
+      }
+    },
+    "2025": {
+      "Ocak": {
+        "usd_try": 35.7,
+        "gold_try": 3219.08
+      },
+      "Şubat": {
+        "usd_try": 36.39,
+        "gold_try": 3357.66
+      },
+      "Mart": {
+        "usd_try": 37.94,
+        "gold_try": 3812.33
+      },
+      "Nisan": {
+        "usd_try": 38.5,
+        "gold_try": 4091.12
+      },
+      "Mayıs": {
+        "usd_try": 39.21,
+        "gold_try": 4145.93
+      },
+      "Haziran": {
+        "usd_try": 39.83,
+        "gold_try": 4218.33
+      },
+      "Temmuz": {
+        "usd_try": 40.66,
+        "gold_try": 4305.33
+      },
+      "Ağustos": {
+        "usd_try": 41.14,
+        "gold_try": 4594.87
+      },
+      "Eylül": {
+        "usd_try": 41.58,
+        "gold_try": 5134.82
+      },
+      "Ekim": {
+        "usd_try": 42.03,
+        "gold_try": 5380.72
+      },
+      "Kasım": {
+        "usd_try": 42.49,
+        "gold_try": 5761.89
+      },
+      "Aralık": {
+        "usd_try": 42.95,
+        "gold_try": 5973.39
+      }
+    },
+    "2026": {
+      "Ocak": {
+        "usd_try": 43.46,
+        "gold_try": 6585.86
+      },
+      "Şubat": {
+        "usd_try": 43.96,
+        "gold_try": 7391.74
+      },
+      "Mart": {
+        "usd_try": 44.45,
+        "gold_try": 6642.62
+      },
+      "Nisan": {
+        "usd_try": 45.14,
+        "gold_try": 6697.39
+      },
+      "Mayıs": {
+        "usd_try": 45.9,
+        "gold_try": 6729.68
+      },
+      "Haziran": {
+        "usd_try": 46.65,
+        "gold_try": 6034.28
+      },
+      "Temmuz": {
+        "usd_try": 47.5,
+        "gold_try": 6183.81
       }
     }
   }
+}
