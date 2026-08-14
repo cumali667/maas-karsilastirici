@@ -88,7 +88,12 @@
         "Nisan": 86372,
         "Mayıs": 86372,
         "Haziran": 86372,
-        "Temmuz": 98089
+        "Temmuz": 98089,
+        "Ağustos": 98089,
+        "Eylül": 98089,
+        "Ekim": 98089,
+        "Kasım": 98089,
+        "Aralık": 98089
       }
     },
     "Öğretim Görevlisi": {
@@ -179,7 +184,12 @@
         "Nisan": 84979,
         "Mayıs": 84979,
         "Haziran": 84979,
-        "Temmuz": 96381
+        "Temmuz": 96381,
+        "Ağustos": 96381,
+        "Eylül": 96381,
+        "Ekim": 96381,
+        "Kasım": 96381,
+        "Aralık": 96381
       }
     },
     "Dr. Öğretim Üyesi": {
@@ -270,7 +280,12 @@
         "Nisan": 93463,
         "Mayıs": 93463,
         "Haziran": 93463,
-        "Temmuz": 106321
+        "Temmuz": 106321,
+        "Ağustos": 106321,
+        "Eylül": 106321,
+        "Ekim": 106321,
+        "Kasım": 106321,
+        "Aralık": 106321
       }
     },
     "Doç. Dr.": {
@@ -361,7 +376,12 @@
         "Nisan": 95263,
         "Mayıs": 95263,
         "Haziran": 95263,
-        "Temmuz": 107602
+        "Temmuz": 107602,
+        "Ağustos": 107602,
+        "Eylül": 107602,
+        "Ekim": 107602,
+        "Kasım": 107602,
+        "Aralık": 107602
       }
     },
     "Prof. Dr.": {
@@ -452,7 +472,12 @@
         "Nisan": 116258,
         "Mayıs": 116258,
         "Haziran": 116258,
-        "Temmuz": 131942
+        "Temmuz": 131942,
+        "Ağustos": 131942,
+        "Eylül": 131942,
+        "Ekim": 131942,
+        "Kasım": 131942,
+        "Aralık": 131942
       }
     }
   }
